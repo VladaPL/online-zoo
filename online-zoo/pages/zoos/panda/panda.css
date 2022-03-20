@@ -1,0 +1,497 @@
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+    url("/assets/fonts/roboto-v20-latin-500.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/roboto-v20-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("/assets/fonts/roboto-v20-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/roboto-v20-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""),
+    url("/assets/fonts/roboto-v20-latin-900.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/roboto-v20-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/fonts/poppins-v15-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/poppins-v15-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""),
+    url("/assets/fonts/roboto-v20-latin-500.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/poppins-v15-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /* txt_style */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* Gray 2 */
+  color: #4f4f4f;
+  padding-top: 94px;
+}
+
+.wrapper {
+  /* обертка для контента */
+  max-width: 1620px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 94px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+}
+
+.main-heading {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap; /*перенос контента на другую строку*/
+  align-items: flex-end; /* управляет выравниванием элементов вдоль поперечной оси*/
+  justify-content: space-between; /* выровнить элементы по краям контейнера*/
+  /* в уроке 23:56, есть отступ сверху padding-top*/
+}
+
+.header__logo {
+  margin-top: 26px;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap; /* перенос контента на другую строку чтобы элементы не налезали друг на друга*/
+}
+
+li {
+  list-style-type: none;
+}
+
+.header__item {
+  margin-right: 83px; /* расстояние между пунктами */
+}
+.header__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  opacity: 0.7;
+}
+
+.header__link_active {
+  font-weight: 900;
+  border-bottom: 2px solid #333333;
+  pointer-events: none; /* предотвращает события мыши и щелчки по элементу*/
+  cursor: default;
+}
+
+.header__item:last-child {
+  /* обнуляем отступ у пункта Sign in */
+  margin-right: 0px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #787b7e;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4f5153;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Header end */
+
+/* Main start */
+
+.main {
+  position: relative;
+}
+
+.wrapper-content {
+  height: 910px;
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar {
+  width: 157px;
+
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
+  float: left;
+  position: sticky;
+  top: 50px; /* если отменить, то сайдбар не едет*/
+}
+
+.sidebar__item {
+  width: 140px;
+  height: 140px;
+}
+
+.sidebar__arrow-up {
+  margin-top: 20px;
+}
+
+.sidebar__arrow-down {
+  margin-bottom: 100px;
+}
+
+.sedebar__container-active {
+  width: 157px;
+  height: 157px;
+}
+
+.sedebar__container-active {
+  position: relative;
+  bottom: 20px;
+}
+
+.sidebar__frame {
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  margin: auto;
+}
+
+.sidebar__img_panda {
+  position: absolute;
+  left: 5px;
+}
+
+.sidebar__img {
+  display: block;
+  margin: auto;
+
+  /*position: absolute;
+  top: 10px;
+  left: 15px;*/
+}
+
+.content__wrapper-video {
+  margin-left: 360px;
+}
+
+.content__title {
+  font-size: 48px;
+  line-height: 56px;
+  line-height: 100%;
+  align: left;
+  color: #333333;
+  font-weight: 900;
+}
+
+.content__video {
+  margin-bottom: 30px;
+}
+
+.content__slider {
+  width: 246px;
+  height: 140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  background-color: #49d6df;
+}
+
+/* Main end */
+
+/* Footer start */
+
+.footer {
+  width: 100%;
+  max-height: 750px;
+  background: #333333;
+  color: #fefefe;
+  position: absolute;
+}
+
+.footer_parts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*создали 3 колонки*/
+  grid-column-gap: 50px; /* расстояние между колонок*/
+  padding-bottom: 60px;
+  padding-top: 110px;
+  border-bottom: 0.5px solid #fefefe;
+  margin-bottom: 28px;
+}
+
+.footer_part2 {
+  justify-self: end;
+}
+
+.footer_part3 {
+  justify-self: end;
+}
+
+.footer_form {
+  padding-top: 57px;
+}
+
+.contact-us {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.footer_form__ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 33px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #bdbdbd;
+}
+
+.footer_form__li {
+  padding-bottom: 20px;
+}
+
+.footer_form__data {
+  background: #333333;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 383px;
+  height: 26px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #e0e0e0;
+}
+
+.footer_form__textarea {
+  background: #333333;
+  width: 380px;
+  height: 104px;
+  border: 0;
+  resize: none;
+}
+
+.footer_fieldset {
+  width: 390px;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.footer_form__send {
+  border: none;
+  background: #333333;
+  margin-left: 280px;
+}
+
+.footer_btn__send {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  background: #333333;
+  color: #fefefe;
+  border: none;
+  margin-right: 24px;
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap; /* перенос контента на другую строку чтобы элементы не налезали друг на друга*/
+  margin-bottom: 74px;
+}
+
+.footer__item {
+  margin-right: 40px; /* расстояние между пунктами */
+}
+.footer__item:last-child {
+  /* обнуляем отступ у последнего пункта */
+  margin-right: 0px;
+}
+
+.footer__link-nav {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fefefe;
+}
+
+.footer__link-nav:hover,
+.footer__link-nav:focus,
+.footer__link-nav:active {
+  opacity: 0.7;
+}
+
+.zoo-center {
+  margin-left: 40px;
+}
+.zoo-center_heading {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.addr-time {
+  margin-bottom: 20px;
+}
+.tel-mail {
+  margin-bottom: 20px;
+}
+
+.footer_list-social-madia {
+  display: flex;
+  flex-wrap: wrap; /* перенос контента на другую строку чтобы элементы не налезали друг на друга*/
+}
+
+.footer_item-social-madia {
+  margin-right: 15px;
+}
+
+.button_donate {
+  width: 275px;
+  height: 55px;
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  /*Text start*/
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer_part4 {
+  padding-bottom: 32px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #bdbdbd;
+}
+
+/* Footer end */

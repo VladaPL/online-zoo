@@ -370,6 +370,7 @@ input:checked + .slider:before {
   font-size: 14px;
   line-height: 16px;
   color: #4f4f4f;
+  
 }
 
 .How-it-works_pic {
